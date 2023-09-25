@@ -6,4 +6,12 @@
     <string name="give_yourself_time_to_find_inner_peace">Give yourself time to find inner peace</string>
     <string name="next">Next</string>
     <string name="start">Start</string>
+    <string name="meditasion">Meditasion</string>
+    <string name="hollo">Hello,</string>
+    <string name="what_s_your_mood_today">What’s Your Mood Today?</string>
+    <string name="very_good">Very Good</string>
+    <string name="good">Good</string>
+    <string name="bad">Bad</string>
+    <string name="very_bad">Very Bad</string>
+    <string name="tap_into_a_calm_state_of_mind_and_relive_the_days_when_you_were_cozy">Tap into a calm state of mind and relive the days when you were cozy.</string>
 </resources>
