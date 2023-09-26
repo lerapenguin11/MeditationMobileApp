@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         APP_ACTIVITY = this
+        setContentView(binding.root)
         replaceFragment(FirstFragment())
     }
 }
