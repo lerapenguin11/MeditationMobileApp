@@ -126,11 +126,13 @@
             android:fontFamily="@font/ubuntu_medium"
             android:gravity="center"
             android:lineHeight="20dp"
+            android:paddingEnd="50dp"
+            android:paddingStart="50dp"
             android:text="@string/your_goal_is_not_to_battle_with_the_mind_but_to_witness_the_mind"
             android:textColor="#C4C4C4"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_title_med_details"
-            app:layout_constraintStart_toStartOf="@+id/tv_title_med_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_med_details" />
 
         <LinearLayout
@@ -170,6 +172,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ImageView
+                android:id="@+id/ic_forward"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

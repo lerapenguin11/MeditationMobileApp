@@ -15,9 +15,11 @@ class MeditationDataSourceImpl : MeditationDataSource {
             val icon = i.meditations.icon
             val title = i.meditations.titleMed
             val time = i.meditations.time
+            val audio = i.audio
 
             val listLetterModel = Meditations(
-                id = id, meditations = MeditationsInfo(icon = icon, titleMed = title, time = time)
+                id = id, meditations = MeditationsInfo(icon = icon, titleMed = title, time = time),
+                audio = audio
             )
 
             list.add(listLetterModel)

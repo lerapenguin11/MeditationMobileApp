@@ -9,8 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.meditationmobileapp.R
 import com.example.meditationmobileapp.domain.entities.Meditations
+import com.example.meditationmobileapp.presentation.ui.adapter.listener.MeditationListener
 
-class MeditationAdapter : RecyclerView.Adapter<MeditationAdapter.MeditationViewHolder>(){
+class MeditationAdapter(private val listener : MeditationListener) : RecyclerView.Adapter<MeditationAdapter.MeditationViewHolder>(){
 
     private val meditationList = mutableListOf<Meditations>()
 
@@ -25,8 +26,10 @@ class MeditationAdapter : RecyclerView.Adapter<MeditationAdapter.MeditationViewH
     override fun onBindViewHolder(holder: MeditationViewHolder, position: Int) {
         val meditation = meditationList[position]
         holder.icon.setImageResource(meditation.meditations.icon)
-        holder.title.setText(meditation.meditations.titleMed.toString())
-        holder.time.setText(meditation.meditations.time)
+        holder.title.setText(meditation.meditations.titleMed)
+        holder.time.text = meditation.meditations.time
+
+        holder.itemView.setOnClickListener { listener.getMeditation(meditation) }
     }
 
     @SuppressLint("NotifyDataSetChanged")
