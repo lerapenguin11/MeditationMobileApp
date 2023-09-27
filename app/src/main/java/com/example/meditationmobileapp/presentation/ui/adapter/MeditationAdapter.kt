@@ -27,15 +27,20 @@ class MeditationAdapter(private val listener : MeditationListener) : RecyclerVie
         val meditation = meditationList[position]
         holder.icon.setImageResource(meditation.meditations.icon)
         holder.title.setText(meditation.meditations.titleMed)
-        holder.time.text = meditation.meditations.time
+        holder.time.setText(meditation.meditations.time)
 
-        holder.itemView.setOnClickListener { listener.getMeditation(meditation) }
+        holder.itemView.setOnClickListener { listener.getMeditation(meditation, meditationList) }
     }
 
     @SuppressLint("NotifyDataSetChanged")
     fun setItem(medList : List<Meditations>){
         meditationList.clear()
         meditationList.addAll(medList)
+        notifyDataSetChanged()
+    }
+
+    fun clearItem(){
+        meditationList.clear()
         notifyDataSetChanged()
     }
 

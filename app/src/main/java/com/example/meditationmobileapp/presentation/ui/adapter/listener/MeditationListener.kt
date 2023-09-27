@@ -4,5 +4,5 @@ import com.example.meditationmobileapp.domain.entities.Meditations
 
 interface MeditationListener {
 
-    fun getMeditation(med : Meditations)
+    fun getMeditation(med : Meditations, medRec : List<Meditations>)
 }

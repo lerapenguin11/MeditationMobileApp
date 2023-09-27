@@ -9,10 +9,43 @@ import kotlinx.coroutines.launch
 class MeditationViewModel(
     private val getMeditationUseCase: GetMeditationsUseCase) : ViewModel(){
 
-    fun getResultMeditation(): LiveData<MutableList<Meditations>> {
+    fun getResultMeditationVeryGood(): LiveData<MutableList<Meditations>> {
         val mutableData = MutableLiveData<MutableList<Meditations>>()
         viewModelScope.launch{
-            getMeditationUseCase.invoke(Constants.getMeditationData()).observeForever {list ->
+            getMeditationUseCase.invoke(Constants.getMeditationVeryGoodData()).observeForever { list ->
+                mutableData.value = list
+            }
+        }
+
+        return mutableData
+    }
+
+    fun getResultMeditationGood(): LiveData<MutableList<Meditations>> {
+        val mutableData = MutableLiveData<MutableList<Meditations>>()
+        viewModelScope.launch{
+            getMeditationUseCase.invoke(Constants.getMeditationGoodData()).observeForever { list ->
+                mutableData.value = list
+            }
+        }
+
+        return mutableData
+    }
+
+    fun getResultMeditationBad(): LiveData<MutableList<Meditations>> {
+        val mutableData = MutableLiveData<MutableList<Meditations>>()
+        viewModelScope.launch{
+            getMeditationUseCase.invoke(Constants.getMeditationBadData()).observeForever { list ->
+                mutableData.value = list
+            }
+        }
+
+        return mutableData
+    }
+
+    fun getResultMeditationVeryBad(): LiveData<MutableList<Meditations>> {
+        val mutableData = MutableLiveData<MutableList<Meditations>>()
+        viewModelScope.launch{
+            getMeditationUseCase.invoke(Constants.getMeditationVeryBadData()).observeForever { list ->
                 mutableData.value = list
             }
         }

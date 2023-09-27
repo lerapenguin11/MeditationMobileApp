@@ -6,16 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.meditationmobileapp.databinding.FragmentDetailsBinding
 import com.example.meditationmobileapp.domain.entities.Meditations
-import com.example.meditationmobileapp.domain.entities.MeditationsInfo
+import com.example.meditationmobileapp.presentation.ui.adapter.RelatedAdapter
+import com.example.meditationmobileapp.presentation.ui.adapter.listener.RelatedListener
 import com.example.meditationmobileapp.presentation.ui.utilits.replaceFragment
 import com.example.meditationmobileapp.presentation.viewmodel.PlayerViewModel
 
-class DetailsFragment(private val med: Meditations) : Fragment() {
+class DetailsFragment(private val med: Meditations,
+                      private val medRec: List<Meditations>) : Fragment(), RelatedListener {
     private var _binding : FragmentDetailsBinding? = null
     private val binding get() = _binding!!
     private lateinit var playerViewModel: PlayerViewModel
+    private lateinit var adapter : RelatedAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,27 +30,24 @@ class DetailsFragment(private val med: Meditations) : Fragment() {
 
         playerViewModel = ViewModelProvider(requireActivity()).get(PlayerViewModel::class.java)
 
-        /*val displayTitle = arguments?.getInt("title")
-        binding.tvTitleMedDetails.setText(displayTitle!!)
+        binding.tvTitleMedDetails.setText(med.meditations.titleMed)
+        binding.tvTimeDetails.setText(med.meditations.time)
+        binding.icIconDetails.setImageResource(med.meditations.icon)
 
-        val displayTime = arguments?.getString("time")
-        binding.tvTimeDetails.text = displayTime!!
+        var list = arrayListOf<Meditations>()
 
-        val displayIcon = arguments?.getInt("icon")
-        binding.icIconDetails.setImageResource(displayIcon!!)
+        for (i in medRec){
+            if (i.id !=0){
+                list.add(i)
+            }
+        }
 
-        val audio = arguments?.getInt("audio")
+        val limitedList = list.take(2)
 
-        val idMed = arguments?.getInt("id")*/
-
-       /* binding.btPlayNow.setOnClickListener {
-            playerViewModel.initBackgroundMusicSetting(requireContext(), song = Meditations(id = idMed!!, audio = audio!!, meditations = MeditationsInfo(titleMed = displayTitle,
-                time = displayTime, icon = displayIcon)))
-            playerViewModel.playSong(song = Meditations(id = idMed, audio = audio, meditations = MeditationsInfo(titleMed = displayTitle,
-                                        time = displayTime, icon = displayIcon)))
-            playerViewModel.player = true
-            replaceFragment(PlayingFragment())
-        }*/
+        adapter = RelatedAdapter(limitedList, this)
+        val layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.rvRelatedMed.layoutManager = layoutManager
+        binding.rvRelatedMed.adapter = adapter
 
         binding.btPlayNow.setOnClickListener {
             playerViewModel.playSong(song = med)
@@ -54,6 +55,14 @@ class DetailsFragment(private val med: Meditations) : Fragment() {
             replaceFragment(PlayingFragment())
         }
 
+        binding.icArrow.setOnClickListener { replaceFragment(HomeFragment()) }
+
         return binding.root
+    }
+
+    override fun getRelated(med: Meditations) {
+        playerViewModel.playSong(song = med)
+        playerViewModel.player = true
+        replaceFragment(PlayingFragment())
     }
 }

@@ -19,4 +19,33 @@
     <string name="related_meditation">Related meditation</string>
     <string name="your_goal_is_not_to_battle_with_the_mind_but_to_witness_the_mind">Your goal is not to battle with the mind, but to witness the mind.</string>
     <string name="relaxing">Relaxing</string>
+
+    <string name="title_good1">Calm at home</string>
+    <string name="title_good2">Healthy productivity</string>
+    <string name="title_good3">More Confident</string>
+    <string name="title_good4">Better Sleeping</string>
+
+    <string name="title_very_good1">Inner Peace</string>
+    <string name="title_very_good2">Zen Bliss</string>
+    <string name="title_very_good3">Calm Reflections</string>
+    <string name="title_very_good4">Mindful Respite</string>
+
+    <string name="title_bad1">Sacred Silence</string>
+    <string name="title_bad2">Inner Harmony</string>
+    <string name="title_bad3">Serenity Now</string>
+    <string name="title_bad4">Blissful Breaths</string>
+
+    <string name="title_very_bad1">Bliss Breath</string>
+    <string name="title_very_bad2">Zen Flow</string>
+    <string name="title_very_bad3">Serene Soul</string>
+    <string name="title_very_bad4">Calm Oasis</string>
+
+    <string name="time1">2 – 3 Minutes</string>
+    <string name="time2">12 – 13 Minutes</string>
+    <string name="time3">2 – 3 Minutes</string>
+    <string name="time4">2 – 3 Minutes</string>
+    <string name="time6">1 – 3 Minutes</string>
+    <string name="time7">2 – 3 Minutes</string>
+    <string name="time8">1 – 2 Minutes</string>
+
 </resources>

@@ -37,9 +37,7 @@ class PlayingFragment : Fragment() {
     private fun onMusic() {
         playerViewModel.currentSong.observe(viewLifecycleOwner, Observer {
             binding.tvTitleMedDetails.setText(it.meditations.titleMed)
-            /*binding.tvNameMeditaton.setText(it.nameMeditation)
-            binding.tvNamePodcast.setText(it.namePodcast)
-            binding.iconPopular.setImageResource(it.icon)*/
+            binding.icIconPlayer.setImageResource(it.meditations.icon)
             playerViewModel.initBackgroundMusicSetting(requireContext(), it)
             playerViewModel.start()
             totalTime = playerViewModel.backgroundMusic!!.duration

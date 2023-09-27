@@ -81,6 +81,7 @@ tools:context=".presentation.ui.fragment.DetailsFragment">
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/ubuntu"
                 android:gravity="center"
+                android:textColor="#6E7781"
                 android:includeFontPadding="false"
                 android:text="2 Session"
                 android:textSize="16sp" />
@@ -106,6 +107,7 @@ tools:context=".presentation.ui.fragment.DetailsFragment">
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/ubuntu"
                 android:gravity="center"
+                android:textColor="#6E7781"
                 android:includeFontPadding="false"
                 android:textSize="16sp"
                 tools:text="7 - 10 Minutes" />
@@ -188,7 +190,5 @@ tools:context=".presentation.ui.fragment.DetailsFragment">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

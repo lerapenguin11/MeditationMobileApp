@@ -22,7 +22,7 @@ class PlayerViewModel : ViewModel() {
 
     init {
 
-        val songsList = Constants.getMeditationData()
+        val songsList = Constants.getMeditationVeryGoodData()
 
         songs.value = songsList
         shuffledSongs = songsList.shuffled()
