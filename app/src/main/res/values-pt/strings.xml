@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Paz interior</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Olá fragmento em branco</string>
+    <string name="welcome_to_meditasion">Bem-vindo à Meditação</string>
+    <string name="give_yourself_time_to_find_inner_peace">Dê a si mesmo tempo para encontrar a paz interior</string>
+    <string name="next">Próximo</string>
+    <string name="start">Começar</string>
+    <string name="meditasion">Meditação</string>
+    <string name="hollo">Olá,</string>
+    <string name="what_s_your_mood_today">Qual é o seu humor hoje\?</string>
+    <string name="very_good">Muito bom</string>
+    <string name="good">Bom</string>
+    <string name="bad">Ruim</string>
+    <string name="very_bad">Muito mal</string>
+    <string name="tap_into_a_calm_state_of_mind_and_relive_the_days_when_you_were_cozy">Entre em um estado de espírito calmo e reviva os dias em que você estava confortável.</string>
+    <string name="calm_down_and_let_s_take_your_own_time">Acalme-se e vamos no seu tempo</string>
+    <string name="play_now">Jogue agora</string>
+    <string name="related_meditation">Meditação relacionada</string>
+    <string name="your_goal_is_not_to_battle_with_the_mind_but_to_witness_the_mind">Seu objetivo não é lutar contra a mente, mas testemunhar a mente.</string>
+    <string name="relaxing">Relaxante</string>
+
+    <string name="title_good1">Calma em casa</string>
+    <string name="title_good2">Produtividade saudável</string>
+    <string name="title_good3">Mais confiante</string>
+    <string name="title_good4">Dormir melhor</string>
+
+    <string name="title_very_good1">Paz interior</string>
+    <string name="title_very_good2">Felicidade Zen</string>
+    <string name="title_very_good3">Reflexões Calmas</string>
+    <string name="title_very_good4">Trégua consciente</string>
+
+    <string name="title_bad1">Silêncio Sagrado</string>
+    <string name="title_bad2">Harmonia Interior</string>
+    <string name="title_bad3">Serenidade agora</string>
+    <string name="title_bad4">Respirações felizes</string>
+
+    <string name="title_very_bad1">Respiração de felicidade</string>
+    <string name="title_very_bad2">Fluxo Zen</string>
+    <string name="title_very_bad3">Alma Serena</string>
+    <string name="title_very_bad4">Oásis Calmo</string>
+
+    <string name="time1">2 – 3 minutos</string>
+    <string name="time2">12 – 13 minutos</string>
+    <string name="time3">2 – 3 minutos</string>
+    <string name="time4">2 – 3 minutos</string>
+    <string name="time6">1 – 3 minutos</string>
+    <string name="time7">2 – 3 minutos</string>
+    <string name="time8">1 – 2 minutos</string>
+</resources>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">İç huzur</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Merhaba boş parça</string>
+    <string name="welcome_to_meditasion">Meditasyona hoş geldiniz</string>
+    <string name="give_yourself_time_to_find_inner_peace">İç huzuru bulmak için kendinize zaman tanıyın</string>
+    <string name="next">Sonraki</string>
+    <string name="start">Başlangıç</string>
+    <string name="meditasion">Meditasyon</string>
+    <string name="hollo">Merhaba,</string>
+    <string name="what_s_your_mood_today">Bugünki ruh halin nasıl\?</string>
+    <string name="very_good">Çok güzel</string>
+    <string name="good">İyi</string>
+    <string name="bad">Kötü</string>
+    <string name="very_bad">Çok Kötü</string>
+    <string name="tap_into_a_calm_state_of_mind_and_relive_the_days_when_you_were_cozy">Sakin bir ruh halinden yararlanın ve rahat olduğunuz günleri yeniden yaşayın.</string>
+    <string name="calm_down_and_let_s_take_your_own_time">Sakin olun ve kendinize zaman ayıralım</string>
+    <string name="play_now">Şimdi oyna</string>
+    <string name="related_meditation">İlgili meditasyon</string>
+    <string name="your_goal_is_not_to_battle_with_the_mind_but_to_witness_the_mind">Amacınız zihinle savaşmak değil, zihne tanıklık etmektir.</string>
+    <string name="relaxing">Rahatlatıcı</string>
+
+    <string name="title_good1">Evde sakin</string>
+    <string name="title_good2">Sağlıklı üretkenlik</string>
+    <string name="title_good3">Daha Güvenli</string>
+    <string name="title_good4">Daha İyi Uyku</string>
+
+    <string name="title_very_good1">İç huzur</string>
+    <string name="title_very_good2">Zen Mutluluğu</string>
+    <string name="title_very_good3">Sakin Yansımalar</string>
+    <string name="title_very_good4">Farkındalıklı Mola</string>
+
+    <string name="title_bad1">Kutsal Sessizlik</string>
+    <string name="title_bad2">İç Uyum</string>
+    <string name="title_bad3">Şimdi Huzur</string>
+    <string name="title_bad4">Keyifli Nefesler</string>
+
+    <string name="title_very_bad1">Mutluluk Nefesi</string>
+    <string name="title_very_bad2">Zen Akışı</string>
+    <string name="title_very_bad3">Sakin Ruh</string>
+    <string name="title_very_bad4">Sakin Vaha</string>
+
+    <string name="time1">2 – 3 Dakika</string>
+    <string name="time2">12 – 13 Dakika</string>
+    <string name="time3">2 – 3 Dakika</string>
+    <string name="time4">2 – 3 Dakika</string>
+    <string name="time6">1 – 3 Dakika</string>
+    <string name="time7">2 – 3 Dakika</string>
+    <string name="time8">1 – 2 Dakika</string>
+</resources>
