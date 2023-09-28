@@ -1,4 +1,4 @@
-package com.example.meditationmobileapp
+package com.example.meditationmobileapp.presentation.ui.fragment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,5 +15,16 @@ class MainActivity : AppCompatActivity() {
         APP_ACTIVITY = this
         setContentView(binding.root)
         replaceFragment(FirstFragment())
+    }
+
+    override fun onBackPressed() {
+        val fragmentManager = supportFragmentManager
+        val fragmentCount = fragmentManager.backStackEntryCount
+
+        if (fragmentCount > 0) {
+            fragmentManager.popBackStackImmediate()
+        } else {
+            super.onBackPressed()
+        }
     }
 }

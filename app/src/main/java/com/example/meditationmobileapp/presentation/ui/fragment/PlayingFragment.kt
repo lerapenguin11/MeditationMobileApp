@@ -2,6 +2,7 @@ package com.example.meditationmobileapp.presentation.ui.fragment
 
 import android.os.Bundle
 import android.os.Handler
+import android.system.Os.remove
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -20,6 +21,7 @@ class PlayingFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var playerViewModel: PlayerViewModel
     private var totalTime: Int = 0
+    private var handler = Handler()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,11 +34,15 @@ class PlayingFragment : Fragment() {
 
         playerViewModel = ViewModelProvider(requireActivity()).get(PlayerViewModel::class.java)
 
-        onMusic()
+
 
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+        onMusic()
+    }
     private fun onMusic() {
         playerViewModel.currentSong.observe(viewLifecycleOwner, Observer {
             binding.tvTitleMedDetails.setText(it.meditations.titleMed)
@@ -58,7 +64,6 @@ class PlayingFragment : Fragment() {
                 override fun onStopTrackingTouch(seekBar: SeekBar?) {}
             })
 
-            val handler = Handler()
             handler.postDelayed(object : Runnable {
                 override fun run() {
                     val currentTime = playerViewModel.backgroundMusic!!.currentPosition
@@ -130,9 +135,10 @@ class PlayingFragment : Fragment() {
         return String.format("%02d:%02d", minutes, seconds)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onStop() {
+        super.onStop()
+        playerViewModel.backgroundMusic!!.stop()
         playerViewModel.backgroundMusic!!.release()
-        //playerEduViewModel.backgroundMusic!!.release()
+        handler?.removeCallbacksAndMessages(null)
     }
 }
