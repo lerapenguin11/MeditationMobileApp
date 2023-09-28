@@ -12,6 +12,7 @@ import com.example.meditationmobileapp.domain.entities.Meditations
 import com.example.meditationmobileapp.presentation.ui.adapter.RelatedAdapter
 import com.example.meditationmobileapp.presentation.ui.adapter.listener.RelatedListener
 import com.example.meditationmobileapp.presentation.ui.utilits.replaceFragment
+import com.example.meditationmobileapp.presentation.ui.utilits.statusBarGray
 import com.example.meditationmobileapp.presentation.viewmodel.PlayerViewModel
 
 class DetailsFragment(private val med: Meditations,
@@ -27,6 +28,8 @@ class DetailsFragment(private val med: Meditations,
     ): View? {
 
         _binding = FragmentDetailsBinding.inflate(inflater, container, false)
+
+        statusBarGray(requireActivity())
 
         playerViewModel = ViewModelProvider(requireActivity()).get(PlayerViewModel::class.java)
 

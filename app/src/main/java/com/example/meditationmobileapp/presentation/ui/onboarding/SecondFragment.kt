@@ -9,6 +9,7 @@ import com.example.meditationmobileapp.R
 import com.example.meditationmobileapp.databinding.FragmentFirstBinding
 import com.example.meditationmobileapp.databinding.FragmentSecondBinding
 import com.example.meditationmobileapp.presentation.ui.utilits.replaceFragment
+import com.example.meditationmobileapp.presentation.ui.utilits.statusBarGray
 
 class SecondFragment : Fragment() {
     private var _binding : FragmentSecondBinding? = null
@@ -20,6 +21,8 @@ class SecondFragment : Fragment() {
     ): View? {
 
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
+
+        statusBarGray(requireActivity())
 
         binding.btNext.setOnClickListener { replaceFragment(ThirdFragment()) }
 

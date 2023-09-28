@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.meditationmobileapp.R
 import com.example.meditationmobileapp.databinding.FragmentPlayingBinding
 import com.example.meditationmobileapp.presentation.ui.utilits.replaceFragment
+import com.example.meditationmobileapp.presentation.ui.utilits.statusBarBlue
 import com.example.meditationmobileapp.presentation.viewmodel.PlayerViewModel
 
 class PlayingFragment : Fragment() {
@@ -26,6 +27,8 @@ class PlayingFragment : Fragment() {
     ): View? {
 
         _binding = FragmentPlayingBinding.inflate(inflater, container, false)
+
+        statusBarBlue(requireActivity())
 
         playerViewModel = ViewModelProvider(requireActivity()).get(PlayerViewModel::class.java)
 

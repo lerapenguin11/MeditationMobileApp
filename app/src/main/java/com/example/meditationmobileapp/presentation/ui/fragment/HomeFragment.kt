@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
@@ -20,6 +21,7 @@ import com.example.meditationmobileapp.domain.entities.Meditations
 import com.example.meditationmobileapp.presentation.ui.adapter.MeditationAdapter
 import com.example.meditationmobileapp.presentation.ui.adapter.listener.MeditationListener
 import com.example.meditationmobileapp.presentation.ui.utilits.replaceFragment
+import com.example.meditationmobileapp.presentation.ui.utilits.statusBarWhite
 import com.example.meditationmobileapp.presentation.viewmodel.CleanArchitectureBlueprintsApplication
 import com.example.meditationmobileapp.presentation.viewmodel.MeditationViewModel
 
@@ -39,6 +41,8 @@ class HomeFragment : Fragment(), MeditationListener {
     ): View? {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        statusBarWhite(requireActivity())
 
         observeDataMeditation()
 
